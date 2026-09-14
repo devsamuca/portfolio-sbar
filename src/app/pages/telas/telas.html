@@ -1,0 +1,42 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Telas e Vídeo</span>
+    <h1>O SBAR+ em funcionamento</h1>
+    <p class="lead">
+      Capturas de tela reais do sistema e um vídeo demonstrando as principais funcionalidades
+      implementadas até o momento.
+    </p>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <h2 class="section-title">Vídeo Demonstrativo</h2>
+    <p class="section-subtitle">Demonstração das principais funcionalidades do SBAR+ (duração até 5 minutos).</p>
+
+    <div class="card video-card">
+      <video controls preload="metadata" [src]="videoUrl">
+        Seu navegador não suporta a reprodução deste vídeo.
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <h2 class="section-title">Capturas de Tela</h2>
+    <p class="section-subtitle">Principais funcionalidades implementadas, capturadas diretamente do sistema em execução.</p>
+
+    <div class="screens-grid">
+      @for (tela of telas; track tela.arquivo) {
+        <a [href]="tela.arquivo" target="_blank" rel="noopener" class="card screen-card">
+          <img [src]="tela.arquivo" [alt]="tela.titulo" loading="lazy" />
+          <div class="screen-info">
+            <h3>{{ tela.titulo }}</h3>
+            <p>{{ tela.descricao }}</p>
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+</section>

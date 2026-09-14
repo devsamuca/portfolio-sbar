@@ -6,6 +6,10 @@
 /out-tsc
 /bazel-out
 
+# Raw source material (already copied into public/ for the site)
+/video
+/telas
+
 # Node
 /node_modules
 npm-debug.log

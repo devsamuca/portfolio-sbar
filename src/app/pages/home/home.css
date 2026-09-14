@@ -1,0 +1,41 @@
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.quick-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.quick-icon {
+  font-size: 1.6rem;
+}
+
+.quick-title {
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.quick-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,112 @@
+.uc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.uc-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  transition: var(--transition);
+}
+
+.uc-item:hover {
+  box-shadow: var(--shadow-subtle);
+}
+
+.uc-item.nivel-1 {
+  margin-left: 1.75rem;
+  background: var(--color-bg-light);
+}
+
+.uc-item.nivel-2 {
+  margin-left: 3.5rem;
+  background: #f7fafc;
+}
+
+.uc-numero {
+  flex-shrink: 0;
+  min-width: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+
+.uc-body h3 {
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  margin-bottom: 0.2rem;
+}
+
+.uc-body p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.cronograma-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.cronograma-table th {
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-size: 0.85rem;
+}
+
+.cronograma-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.88rem;
+  color: var(--color-text-dark);
+  vertical-align: top;
+}
+
+.cronograma-table tr:last-child td {
+  border-bottom: none;
+}
+
+.fase-nome {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cronograma-table ul {
+  list-style: disc;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--color-text-muted);
+}
+
+.status-badge {
+  display: inline-flex;
+  padding: 0.3rem 0.75rem;
+  border-radius: 30px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: #fdecea;
+  color: #c0392b;
+  white-space: nowrap;
+}
+
+.status-badge.done {
+  background: #e6f7ec;
+  color: #1e8449;
+}

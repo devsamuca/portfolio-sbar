@@ -1,0 +1,48 @@
+.video-card {
+  padding: 0.75rem;
+  max-width: 900px;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  display: block;
+  background: #000;
+}
+
+.screens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.screen-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.screen-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.screen-info {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.screen-info h3 {
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+  margin-bottom: 0.3rem;
+}
+
+.screen-info p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}

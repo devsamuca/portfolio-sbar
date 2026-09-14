@@ -1,0 +1,163 @@
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.problem-card {
+  padding: 1.5rem;
+}
+
+.problem-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.problem-card p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+}
+
+.problem-note {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 820px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.tech-card {
+  padding: 1.5rem;
+}
+
+.tech-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.tech-icon {
+  font-size: 1.4rem;
+}
+
+.tech-header h3 {
+  font-size: 1.05rem;
+  color: var(--color-text-dark);
+}
+
+.tech-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tech-card li {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.tech-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.arch-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.arch-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.arch-step {
+  padding: 1.1rem 1.25rem;
+}
+
+.arch-index {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.arch-step h4 {
+  font-size: 1rem;
+  color: var(--color-text-dark);
+  margin: 0.2rem 0 0.3rem;
+}
+
+.arch-step p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.arch-step-arrow {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.arch-image {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.arch-image img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.arch-image-caption {
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .problem-grid,
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-step-arrow {
+    transform: rotate(90deg);
+  }
+}

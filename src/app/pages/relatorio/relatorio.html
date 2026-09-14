@@ -1,0 +1,25 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Relatório de Estágio</span>
+    <h1>Relatório completo, correspondente às atividades até a entrega do portfólio</h1>
+    <p class="lead">
+      Documento oficial do Estágio Supervisionado, com introdução, diagramas, telas, workflow,
+      recursos tecnológicos e cronograma do projeto SBAR+.
+    </p>
+    <div class="hero-actions">
+      <a [href]="relatorioUrl" target="_blank" rel="noopener" class="btn btn-primary">Abrir PDF em nova aba</a>
+      <a [href]="relatorioUrl" download class="btn btn-secondary">Baixar PDF</a>
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <div class="card pdf-frame-wrap">
+      <iframe [src]="relatorioSafeUrl" title="Relatório de Estágio SBAR+" class="pdf-frame"></iframe>
+    </div>
+    <p class="pdf-fallback">
+      Não visualizou o documento acima? <a [href]="relatorioUrl" target="_blank" rel="noopener">Abra o PDF diretamente aqui</a>.
+    </p>
+  </div>
+</section>

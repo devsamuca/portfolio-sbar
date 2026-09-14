@@ -1,0 +1,102 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Sobre o Projeto</span>
+    <h1>Comunicação assistencial estruturada, do plantão ao paciente</h1>
+    <p class="lead">
+      O SBAR+ nasceu da vivência de mais de quatro anos na Santa Casa de Londrina, observando
+      como falhas na comunicação entre equipes de plantão comprometem a segurança do paciente.
+    </p>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <h2 class="section-title">O Problema que o Sistema Busca Resolver</h2>
+    <p class="section-subtitle">
+      Baseado no Documento de Visão do projeto.
+    </p>
+
+    <div class="problem-grid">
+      <div class="card problem-card">
+        <span class="problem-label">O problema</span>
+        <p>Falta de comunicação eficiente entre as equipes de saúde durante passagens de plantão e transferências de pacientes.</p>
+      </div>
+      <div class="card problem-card">
+        <span class="problem-label">Afeta</span>
+        <p>Os pacientes internados e os profissionais das unidades assistenciais e UTIs do hospital.</p>
+      </div>
+      <div class="card problem-card">
+        <span class="problem-label">Impacto</span>
+        <p>Ausência ou redundância de informações vitais compromete a eficiência das decisões clínicas e a segurança assistencial.</p>
+      </div>
+    </div>
+
+    <p class="problem-note">
+      O sistema legado utilizado pela instituição só permite o preenchimento de informações em
+      horários específicos, dificultando o registro imediato de ocorrências. O SBAR+ propõe
+      substituir esse fluxo por um registro estruturado, baseado no método <strong>SBAR</strong>
+      (Situação, Breve Histórico, Avaliação e Recomendação), padrão internacionalmente reconhecido
+      pela Joint Commission International (JCI) para comunicação efetiva em saúde.
+    </p>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <h2 class="section-title">Tecnologias Utilizadas</h2>
+    <p class="section-subtitle">Stack completa do backend ao frontend, incluindo o módulo de apoio à decisão com IA.</p>
+
+    <div class="tech-grid">
+      @for (group of techGroups; track group.title) {
+        <div class="card tech-card">
+          <div class="tech-header">
+            <span class="tech-icon">{{ group.icon }}</span>
+            <h3>{{ group.title }}</h3>
+          </div>
+          <ul>
+            @for (item of group.items; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <h2 class="section-title">Arquitetura da Solução</h2>
+    <p class="section-subtitle">
+      Arquitetura em três camadas, com comunicação segura via HTTPS entre cliente, servidor de
+      aplicação e servidor de banco de dados.
+    </p>
+
+    <div class="arch-layout">
+      <div class="arch-steps">
+        <div class="card arch-step">
+          <span class="arch-index">01</span>
+          <h4>PC do Usuário</h4>
+          <p>Browser acessa a aplicação React (PWA) servida via HTTPS.</p>
+        </div>
+        <div class="arch-step-arrow">→</div>
+        <div class="card arch-step">
+          <span class="arch-index">02</span>
+          <h4>Servidor de Aplicação</h4>
+          <p>Nginx serve o frontend React e expõe a API REST em C# / ASP.NET Core.</p>
+        </div>
+        <div class="arch-step-arrow">→</div>
+        <div class="card arch-step">
+          <span class="arch-index">03</span>
+          <h4>Servidor de Banco de Dados</h4>
+          <p>Oracle Database, acessado via Oracle Net a partir da API.</p>
+        </div>
+      </div>
+
+      <a href="diagramas/implantacao.png" target="_blank" rel="noopener" class="card arch-image">
+        <img src="diagramas/implantacao.png" alt="Diagrama de Implantação do SBAR+" />
+        <span class="arch-image-caption">Diagrama de Implantação — clique para ampliar</span>
+      </a>
+    </div>
+  </div>
+</section>

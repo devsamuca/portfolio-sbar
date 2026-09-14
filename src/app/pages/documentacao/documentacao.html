@@ -1,0 +1,45 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Documentação</span>
+    <h1>Diagramas técnicos do projeto</h1>
+    <p class="lead">
+      Todos os diagramas elaborados durante o Estágio Supervisionado I, prontos para consulta em
+      alta resolução — clique em qualquer imagem para abri-la em tamanho real.
+    </p>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <div class="diagram-grid">
+      @for (d of diagramas; track d.arquivo) {
+        <a [href]="d.arquivo" target="_blank" rel="noopener" class="card diagram-card">
+          <div class="diagram-thumb">
+            <img [src]="d.arquivo" [alt]="d.titulo" loading="lazy" />
+          </div>
+          <div class="diagram-info">
+            <h3>{{ d.titulo }}</h3>
+            <p>{{ d.descricao }}</p>
+            <span class="diagram-link">Abrir imagem em tamanho real ↗</span>
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <h2 class="section-title">Documentos Complementares</h2>
+    <p class="section-subtitle">Artefatos de levantamento de requisitos que fundamentaram a modelagem do sistema.</p>
+
+    <div class="doc-links">
+      @for (doc of documentosComplementares; track doc.arquivo) {
+        <a [href]="doc.arquivo" target="_blank" rel="noopener" class="card doc-link">
+          <span>📄</span>
+          {{ doc.titulo }}
+        </a>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Casos de Uso e Cronograma</span>
+    <h1>15 casos de uso, do atendimento de urgência à alta hospitalar</h1>
+    <p class="lead">
+      Funcionalidades previstas para o funcionário do hospital operar unidades, leitos, pacientes,
+      exames, cirurgias e o apoio à decisão clínica com IA.
+    </p>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <h2 class="section-title">Casos de Uso do Sistema</h2>
+    <p class="section-subtitle">
+      Baseado no <a href="documentos/relatorio-de-estagio.pdf" target="_blank" rel="noopener">Diagrama de Caso de Uso</a>
+      atual do projeto (ator único: Funcionário do hospital).
+    </p>
+
+    <div class="uc-list">
+      @for (uc of casosDeUso; track uc.numero) {
+        <div class="uc-item" [class]="'nivel-' + uc.nivel">
+          <span class="uc-numero">{{ uc.numero }}</span>
+          <div class="uc-body">
+            <h3>{{ uc.nome }}</h3>
+            <p>{{ uc.descricao }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <h2 class="section-title">Cronograma de Desenvolvimento</h2>
+    <p class="section-subtitle">
+      Alinhado ao planejamento do Estágio Supervisionado I e II. As duas primeiras fases,
+      responsáveis pela análise, projeto e implementação dos 15 casos de uso, estão concluídas —
+      evidenciadas pelos diagramas e pelas telas em funcionamento apresentadas neste portfólio.
+    </p>
+
+    <div class="table-wrap">
+      <table class="cronograma-table">
+        <thead>
+          <tr>
+            <th>Fase</th>
+            <th>Entregáveis</th>
+            <th>Período</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (fase of cronograma; track fase.fase) {
+            <tr>
+              <td class="fase-nome">{{ fase.fase }}</td>
+              <td>
+                <ul>
+                  @for (item of fase.entregaveis; track item) {
+                    <li>{{ item }}</li>
+                  }
+                </ul>
+              </td>
+              <td>{{ fase.periodo }}</td>
+              <td>
+                <span class="status-badge" [class.done]="fase.status === 'Concluído'">{{ fase.status }}</span>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
